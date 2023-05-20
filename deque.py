@@ -88,7 +88,24 @@ class Deque:
     # Se a deque estiver vazia, lança uma exceção: raise Exception("mensagem de erro")
     def remove_rear(self) -> No:
         # implementação do método
-        pass
+        if self.is_empty():
+            raise Exception("Deque vazia")
+        noRemovido = self.__fim
+        
+        if self.__inicio == self.__fim:
+            self.__inicio = None
+            self.__fim = None
+
+        else:
+            noAtual = self.__inicio
+            while noAtual.prox != self.__fim:
+                noAtual = noAtual.prox
+            
+            noAtual .prox = None
+            self.__fim = noAtual
+
+        self.__qtdElementos -= 1
+        return noRemovido
     
 
     # Retorna o primeiro elemento da deque sem removê-lo
