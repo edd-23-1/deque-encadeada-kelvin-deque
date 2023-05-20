@@ -14,14 +14,14 @@ class Deque:
     # Retorna True se a deque estiver vazia e False caso contrário
     def is_empty(self) -> bool:
         # implementação do método
-       pass
+       return self.__qtdElementos == 0
 
 
     # Verifica se a deque está cheia
     # Retorna True se a deque estiver cheia e False caso contrário
     def is_full(self) -> bool:
         # implementação do método
-        pass
+        return self.__qtdElementos == self.__capacidade
     
 
     # Insere um elemento no início da deque e retorna True
