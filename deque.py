@@ -28,7 +28,21 @@ class Deque:
     # Se a fila estiver cheia, lança uma exceção 
     def add_front(self, valor) -> bool:
         # implementação do método
-        pass
+        if self.is_full():
+            raise Exception("Deque cheia")
+        novoNo = No(valor)
+
+        if self.is_empty():
+            self.__inicio = novoNo
+            self.__fim = novoNo
+
+        else:
+            novoNo.prox = self.__inicio
+            self.__inicio = novoNo
+            self.__inicio = novoNo
+        
+        self.__qtdElementos += 1
+        return True
 
 
     # Insere um elemento no final da deque e retorna True
