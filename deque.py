@@ -56,14 +56,14 @@ class Deque:
     # Se a deque estiver vazia retorna None
     def peek_front(self) -> No:
         # implementação do método
-        pass
+        return self.__inicio
 
 
     # Retorna o último elemento da deque sem removê-lo
     # Se a deque estiver vazia retorna None
     def peek_rear(self) -> No:
         # implementação do método
-        pass
+        return self.__fim
     
 
     # Retorna uma lista com os valores do atributo dado de cada No
