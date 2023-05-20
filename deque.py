@@ -143,7 +143,6 @@ class Deque:
         print(elementos)
         return elementos
 
-    
 
     # Retorna a quantidade de elementos na deque
     # Se a deque estiver vazia, retorna ZERO
