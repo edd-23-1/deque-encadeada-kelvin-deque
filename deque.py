@@ -129,7 +129,20 @@ class Deque:
     # que a deque está vazia e retorna uma lista vazia
     def display(self) -> list():
         # implementação do método
-        pass
+        if self.is_empty():
+            print("Deque está vazia")
+            return []
+        
+        noAtual = self.__inicio
+        elementos = []
+
+        while noAtual:
+            elementos.append(noAtual.dado)
+            noAtual = noAtual.prox
+        
+        print(elementos)
+        return elementos
+
     
 
     # Retorna a quantidade de elementos na deque
