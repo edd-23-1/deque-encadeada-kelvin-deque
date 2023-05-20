@@ -56,7 +56,19 @@ class Deque:
     # Se a deque estiver vazia, lança uma exceção: raise Exception("mensagem de erro")
     def remove_front(self) -> No:
         # implementação do método
-        pass
+        if self.is_empty():
+            raise Exception("Deque vazia")
+        noRemovido = self.__inicio
+
+        if self.__inicio == self.__fim:
+            self.__inicio = None
+            self.__fim = None
+
+        else:
+            self.__inicio = self.__inicio.prox
+        
+        self.__qtdElementos -= 1
+        return noRemovido
     
 
     # Remove um elemento do início da deque e retorna esse elemento
