@@ -49,7 +49,20 @@ class Deque:
     # Se a deque estiver cheia, lança uma exceção 
     def add_rear(self, valor) -> bool:
         # implementação do método
-        pass
+        if self.is_full():
+            raise Exception("Deque cheia")
+        novoNo = No(valor)
+
+        if self.is_empty():
+            self.__inicio = novoNo
+            self.__fim = novoNo
+
+        else:
+            self.__fim.prox = novoNo
+            self.__fim = novoNo
+        
+        self.__qtdElementos += 1
+        return True
 
 
     # Remove um elemento do início da deque e retorna esse elemento
