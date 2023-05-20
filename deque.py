@@ -80,4 +80,4 @@ class Deque:
     # Se a deque estiver vazia, retorna ZERO
     def size(self) -> int:
         # implementação do método
-        pass
+        return self.__qtdElementos
